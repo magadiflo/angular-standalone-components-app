@@ -4,9 +4,5 @@
     </h2>
 </section>
 <article class="pet-list">
-    <ul>
-        <li *ngFor="let dog of dogs">
-            {{ dog.name }} <p>{{dog.description}}</p>
-        </li>
-    </ul>
+    <app-dogs-card *ngFor="let dog of dogs; let i = index" [dog]="dog" [index]="i"></app-dogs-card>
 </article>
